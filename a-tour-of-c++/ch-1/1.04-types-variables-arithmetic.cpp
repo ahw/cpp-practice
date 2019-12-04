@@ -11,6 +11,11 @@ double d3 = {3.3};
 std::vector<int> v1 {1, 2, 3, 6, 2, 8};
 int a1[] = {1, 2, 3, 4};
 
+// Initializations
+// ===============
+int x = 7;
+int& r {x};
+
 // warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
 // char* s1 {"Hello this is a string"};
 
@@ -65,4 +70,8 @@ int main() {
     print(d1);
     print(a1);
     print("Hello");
+
+    r = 6;
+    printf("x = %d %p\n", x, &x);
+    printf("r = %d %p\n", r, &r);
 }

@@ -12,6 +12,10 @@ std::ostream& operator<<(std::ostream &strm, const Foo &a) {
   return strm << "F(" << a.i << ")";
 }
 
+void print(int& i) {
+    printf("print int: %d %p\n", i, &i);
+}
+
 int main() {
     Foo a, b;
     Foo* p1 = new Foo;
@@ -27,4 +31,11 @@ int main() {
     printf("Pointer address of &p2 %p\n", &p2); // 0x7ffee1af7020
     printf("Pointer address of  &a %p\n", &a); // 0x7ffee1af7038
     printf("Pointer address of  &b %p\n", &b); // 0x7ffee1af7030
+
+    int x = 6;
+    int*y = &x;
+    printf("%d %p\n", x, &x);
+    print(x);
+    printf("%d %p\n", *y, &y);
+    print(*y);
 }
