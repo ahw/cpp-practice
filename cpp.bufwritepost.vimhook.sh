@@ -8,5 +8,5 @@ mkdir -p $OUTPUT_DIR
 
 echo "OUTPUT_DIR=${OUTPUT_DIR}"
 echo "OUTPUT_FILE=${OUTPUT_FILE}"
-g++-8 -v $1 -o ${OUTPUT_DIR}/${OUTPUT_FILE} && ./${OUTPUT_DIR}/${OUTPUT_FILE}
-# g++-8 $1 -o ${OUTPUT_DIR}/${OUTPUT_FILE} && ./${OUTPUT_DIR}/${OUTPUT_FILE}
+g++-8 $1 -o ${OUTPUT_DIR}/${OUTPUT_FILE} && ./${OUTPUT_DIR}/${OUTPUT_FILE}
+# g++-8 $1 -Wl,--verbose -H -v -o ${OUTPUT_DIR}/${OUTPUT_FILE} && ./${OUTPUT_DIR}/${OUTPUT_FILE}
