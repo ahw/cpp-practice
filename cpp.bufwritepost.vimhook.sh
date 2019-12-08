@@ -1,4 +1,5 @@
 # vimhook.bufferoutput.wrap_mode = wrap
+# vimhook.bufferoutput.filetype = log
 
 CPP_FILE=${1##*/}
 OUTPUT_FILE=${CPP_FILE%.cpp}
