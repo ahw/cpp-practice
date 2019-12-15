@@ -84,8 +84,7 @@ force fixes to the three issues above.
 
 
 
-1. Pointing the compiler to .h header files for #include lines to work
-----------------------------------------------------------------------
+## Pointing the compiler to .h header files for #include lines to work
 
 If you are calling gcc or g++, pass the path to the .h file like this:
     gcc -I/location/of/headers ...
@@ -119,8 +118,7 @@ and do:
 Then do the same for g++.
 
 
-2. Pointing the linker to the library's binaries
-------------------------------------------------
+## Pointing the linker to the library's binaries
 
 With access to library headers, gcc can compile object code (.o files
 created when using the -c command-line option) without needing access to
@@ -154,8 +152,7 @@ could override the gcc binary as in the previous section. This time
 forcing the use of -L command-line arguments.
 
 
-3. Making sure your executable can find the library's .so file
---------------------------------------------------------------
+## Making sure your executable can find the library's .so file
 
 Even if the compiler knew where a shared object (.so file) was at
 compile time, your resulting program can still have difficulty finding
